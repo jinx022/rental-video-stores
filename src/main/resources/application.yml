@@ -1,0 +1,35 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+    min-response-size: 2KB
+
+spring:
+  application:
+    name: video_store_exam
+
+  datasource:
+    url: jdbc:${DB_VENDOR}://${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}?ssl-mode=REQUIRED
+    username: ${DB_USERNAME}
+    #password: ${DB_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.MariaDBDialect
+      hibernate:
+        format_sql: true
+        enable_lazy_load_no_trans: true
+    show-sql: true
+    open-in-view: false
+    defer-datasource-initialization: true
+
+logging:
+  level:
+    org.springframework: info
+    it.cgmconsulting.picozzi: info
+    org.hibernate.orm.jdbc.bind: trace
