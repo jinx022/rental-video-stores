@@ -52,7 +52,7 @@ Il progetto implementa una rigorosa separazione delle responsabilità:
    ```bash
    mvn spring-boot:run
 
-## 🔌 Elenco degli Endpoint API Principali
+## Elenco degli Endpoint API Principali
 
 Di seguito gli endpoint esposti dall'applicativo (base URL: `http://localhost:8081/api`):
 
